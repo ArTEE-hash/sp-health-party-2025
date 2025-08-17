@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รายชื่อผู้เกษียณ | ร้อยรักจากใจ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Kanit', sans-serif; margin:0; background:#f9f9f9; }
+    header, footer { background: linear-gradient(90deg,#786fc6,#ff7730); color:white; text-align:center; padding:20px; }
+    nav { background: rgba(0,0,0,0.5); padding:12px; text-align:center; }
+    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+    section { padding:40px 20px; max-width:900px; margin:auto; }
+    table { width:100%; border-collapse: collapse; margin-top:20px; }
+    th, td { border:1px solid #ccc; padding:8px; text-align:left; }
+    th { background:#786fc6; color:white; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>รายชื่อผู้เกษียณ</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="list.html">ตรวจสอบรายชื่อ</a>
+    <a href="seating.html">แผนผังที่นั่ง</a>
+    <a href="index.html#contact">ผู้ประสานงาน</a>
+    <a href="retirees.html">รายชื่อผู้เกษียณ</a>
+    <a href="index.html#venue">สถานที่จัดงาน</a>
+  </nav>
+
+  <section>
+    <table id="retireeTable">
+      <thead>
+        <tr>
+          <th>ชื่อ-นามสกุล</th>
+          <th>ตำแหน่ง</th>
+          <th>หน่วยงาน</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ข้อมูลจะถูกเติมโดย JavaScript -->
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>© 2568 ร้อยรักจากใจ... สายใยผูกพัน</p>
+  </footer>
+
+  <script>
+    // ใส่ลิงก์ Web App ของคุณที่นี่
+    const WEB_APP_URL = "YOUR_WEB_APP_URL_HERE";
+
+    fetch(WEB_APP_URL)
+      .then(res => res.json())
+      .then(data => {
+        const tableBody = document.querySelector("#retireeTable tbody");
+        data.forEach(r => {
+          tableBody.innerHTML += `<tr><td>${r.name}</td><td>${r.position}</td><td>${r.dept}</td></tr>`;
+        });
+      })
+      .catch(err => console.error("Error fetching data:", err));
+  </script>
+</body>
+</html>
