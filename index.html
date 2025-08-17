@@ -10,61 +10,195 @@
       font-family: 'Kanit', sans-serif;
       margin: 0;
       min-height: 100vh;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #e94560 100%);
+      padding: 20px;
+      position: relative;
+      color: #fff;
+    }
+    
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: 
         radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255, 119, 48, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(233, 69, 96, 0.2) 0%, transparent 50%),
-        #f9f9f9;
-      color: #333;
+        radial-gradient(circle at 40% 40%, rgba(233, 69, 96, 0.2) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
     }
+    
     header {
-      background: linear-gradient(90deg, #786fc6, #ff7730);
+      background: linear-gradient(135deg, #ff7730 0%, #e94560 50%, #8b5cf6 100%);
       color: white;
       padding: 30px 20px;
       text-align: center;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
+    
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.2em;
+      font-weight: 600;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
+    
     header h2 {
-      margin: 10px 0 5px;
-      font-weight: normal;
+      margin: 15px 0 10px;
+      font-weight: 400;
+      font-size: 1.3em;
+      opacity: 0.95;
     }
+    
     header p {
-      margin: 5px 0;
+      margin: 8px 0;
       font-size: 1.1em;
+      opacity: 0.9;
     }
+    
     nav {
-      background: rgba(0,0,0,0.5);
-      padding: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      padding: 15px;
       text-align: center;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(31, 38, 135, 0.2);
     }
+    
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
+    
     nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 119, 48, 0.3);
+    }
+    
+    section {
+      padding: 40px 30px;
+      max-width: 900px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    }
+    
+    h2 {
+      color: #ff7730;
+      border-bottom: 2px solid rgba(255, 119, 48, 0.5);
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+    
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    ul {
+      padding-left: 20px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    a {
+      color: #ff7730;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    a:hover {
+      color: #e94560;
       text-decoration: underline;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+    
+    .register-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff7730 0%, #e94560 50%, #8b5cf6 100%);
+      color: white !important;
+      padding: 15px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(255, 119, 48, 0.3);
     }
-    h2 {
-      color: #444;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
+    
+    .register-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(255, 119, 48, 0.4);
+      color: white !important;
     }
+    
+    iframe {
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
     footer {
-      background: linear-gradient(90deg, #786fc6, #ff7730);
+      background: linear-gradient(135deg, #ff7730 0%, #e94560 50%, #8b5cf6 100%);
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 25px;
       margin-top: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      header {
+        padding: 20px 15px;
+      }
+      
+      header h1 {
+        font-size: 1.8em;
+      }
+      
+      nav a {
+        margin: 5px 10px;
+        font-size: 14px;
+      }
+      
+      section {
+        padding: 25px 20px;
+        margin: 15px auto;
+      }
+      
+      h2 {
+        font-size: 1.5em;
+      }
     }
   </style>
 </head>
@@ -75,7 +209,7 @@
     <p>โรงแรมแกรนด์ พาลาซโซ่ พัทยา</p>
     <p>วันที่ 19 สิงหาคม 2568 เวลา 18.00 น. เป็นต้นไป</p>
   </header>
-
+  
   <nav>
     <a href="#register">ลงทะเบียน</a>
     <a href="list.html">ตรวจสอบรายชื่อ</a>
@@ -84,30 +218,38 @@
     <a href="retirees.html">รายชื่อผู้เกษียณ</a>
     <a href="#venue">สถานที่จัดงาน</a>
   </nav>
-
+  
   <section id="register">
     <h2>ลงทะเบียน</h2>
-    <p>คลิกที่ปุ่มด้านล่างเพื่อลงทะเบียนเข้าร่วมงาน</p>
-    <a href="https://forms.gle/xxxxx" target="_blank">[ ลงทะเบียนที่นี่ ]</a>
+    <p>คลิกที่ปุ่มด้านล่างเพื่อลงทะเบียนเข้าร่วมงาน "ร้อยรักจากใจ...สายใยผูกพัน"</p>
+    <p>ระบบจะสร้างบัตรเข้าร่วมงานดิจิทัลพร้อม QR Code ให้อัตโนมัติ</p>
+    <a href="https://forms.gle/xxxxx" target="_blank" class="register-button">
+      ลงทะเบียนที่นี่
+    </a>
   </section>
-
+  
   <section id="contact">
     <h2>ผู้ประสานงาน</h2>
     <ul>
-      <li>คุณ... โทร. 08X-XXX-XXXX</li>
-      <li>คุณ... โทร. 09X-XXX-XXXX</li>
+      <li><strong>คุณ...</strong> โทร. 08X-XXX-XXXX</li>
+      <li><strong>คุณ...</strong> โทร. 09X-XXX-XXXX</li>
     </ul>
+    <p>หากมีข้อสงสัยเกี่ยวกับการลงทะเบียนหรือรายละเอียดงาน กรุณาติดต่อผู้ประสานงาน</p>
   </section>
-
+  
   <section id="venue">
     <h2>สถานที่จัดงาน</h2>
-    <p>โรงแรมแกรนด์ พาลาซโซ่ พัทยา</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18..."
+    <p><strong>โรงแรมแกรนด์ พาลาซโซ่ พัทยา</strong></p>
+    <p>ห้องพิมาน แกรนด์ บอลรูม ชั้น 2</p>
+    <p>เวลา: 18.00 - 22.00 น.</p>
+    <p>วันที่: 19 สิงหาคม 2568</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5441168458756!2d100.88447341482338!3d13.650284990699892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d3f8b9b2e3c4d%3A0x5a8b8c9d0e1f2a3b!2sGrand%20Palazzo%20Hotel%20Pattaya!5e0!3m2!1sen!2sth!4v1620000000000!5m2!1sen!2sth"
             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
-
+  
   <footer>
-    <p>© 2568 ร้อยรักจากใจ... สายใยผูกพัน | บุคลากรสาธารณสุข</p>
+    <p>© 2568 ร้อยรักจากใจ... สายใยผูกพัน | บุคลากรสาธารณสุข จังหวัดสมุทรปราการ</p>
+    <p>Beautiful Party</p>
   </footer>
 </body>
 </html>
