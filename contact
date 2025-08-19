@@ -1,0 +1,30 @@
+<!-- Contact Section -->
+<section id="contact" style="
+  margin: 60px auto;
+  max-width: 900px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  color: #fff;
+">
+  <h2 style="font-size: 2rem; margin-bottom: 25px; text-align: center; text-shadow: 1px 1px 5px rgba(0,0,0,0.5);">
+    ผู้ประสานงาน
+  </h2>
+
+  <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; font-size: 1.1rem; line-height: 1.8;">
+    <div style="font-weight: bold;">ชื่อ–นามสกุล</div>
+    <div>นายศรัณยู โสตะวงศ์</div>
+
+    <div style="font-weight: bold;">กลุ่มงาน</div>
+    <div>พัฒนายุทธศาสตร์สาธารณสุข สสจ.สมุทรปราการ</div>
+
+    <div style="font-weight: bold;">บทบาทหน้าที่</div>
+    <div>ผู้ประสานงานกลาง ดูแลการจัดงาน และการสื่อสารกับหน่วยงานที่เกี่ยวข้อง</div>
+
+    <div style="font-weight: bold;">โทรศัพท์</div>
+    <div><a href="tel:0812345678" style="color: #ffeb3b; text-decoration: none;">081-234-5678</a></div>
+
+    <div style="font-weight: bold;">อีเมล</div>
+    <div><a href="mailto:healthparty2025@example.com" style="color: #ffeb3b; text-decoration: none;">healthparty2025@example.co
